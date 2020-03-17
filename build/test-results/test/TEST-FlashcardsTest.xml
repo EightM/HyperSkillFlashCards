@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FlashcardsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-17T13:05:43" hostname="LAPTOP-JLFSU7BB" time="1.382">
+  <properties/>
+  <testcase name="start" classname="FlashcardsTest" time="1.382"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>export
+File name:
+>capitals.txt
+0 cards have been saved.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>export
+File name:
+>capitalsNew.txt
+0 cards have been saved.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>exit
+Bye bye!
+?[1;31m
+Start test 2?[0m
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>add
+The card:
+>France
+The definition of the card:
+>Paris
+The pair ("France":"Paris") has been added.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>add
+The card:
+>Russia
+The definition of the card:
+>Moscow
+The pair ("Russia":"Moscow") has been added.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>ask
+How many to ask?
+>3
+Print the definition of "France":
+>France
+Wrong answer. The correct one is "Paris".
+Print the definition of "France":
+>??
+Wrong answer. The correct one is "Paris".
+Print the definition of "France":
+>
+Wrong answer. The correct one is "Paris".
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>exit
+Bye bye!
+2 cards have been saved.
+?[1;31m
+Start test 3?[0m
+2 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>add
+The card:
+>Japan
+The definition of the card:
+>Tokyo
+The pair ("Japan":"Tokyo") has been added.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>ask
+How many to ask?
+>3
+Print the definition of "Russia":
+>Moscow
+Correct answer
+Print the definition of "Russia":
+>Paris
+Wrong answer. The correct one is "Moscow", you've just written the definition of "France".
+Print the definition of "Russia":
+>Tokyo
+Wrong answer. The correct one is "Moscow", you've just written the definition of "Japan".
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>exit
+Bye bye!
+3 cards have been saved.
+?[1;31m
+Start test 4?[0m
+3 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>ask
+How many to ask?
+>3
+Print the definition of "Japan":
+>Moscow
+Wrong answer. The correct one is "Tokyo", you've just written the definition of "Russia".
+Print the definition of "Japan":
+>Paris
+Wrong answer. The correct one is "Tokyo", you've just written the definition of "France".
+Print the definition of "Japan":
+>Tokyo
+Correct answer
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>remove
+The card:
+>Japan
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>exit
+Bye bye!
+2 cards have been saved.
+?[1;31m
+Start test 5?[0m
+2 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+>exit
+Bye bye!
+]]></system-out>
+  <system-err><![CDATA[java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at flashcards.Main.importData(Main.java:250)
+	at flashcards.Main.importCards(Main.java:236)
+	at flashcards.Main.main(Main.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.hyperskill.hstest.v6.stage.BaseStageTest.invokeMain(BaseStageTest.java:212)
+	at org.hyperskill.hstest.v6.stage.BaseStageTest.lambda$runMain$0(BaseStageTest.java:192)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at flashcards.Main.importData(Main.java:250)
+	at flashcards.Main.importCards(Main.java:236)
+	at flashcards.Main.main(Main.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.hyperskill.hstest.v6.stage.BaseStageTest.invokeMain(BaseStageTest.java:212)
+	at org.hyperskill.hstest.v6.stage.BaseStageTest.lambda$runMain$0(BaseStageTest.java:192)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+]]></system-err>
+</testsuite>
